@@ -1,0 +1,348 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>RecordSettingDialog</class>
+ <widget class="QDialog" name="RecordSettingDialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>752</width>
+    <height>420</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>录屏设置</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <widget class="QGroupBox" name="videoGroupBox">
+     <property name="title">
+      <string>视频设置</string>
+     </property>
+     <layout class="QGridLayout" name="gridLayout">
+      <item row="0" column="0">
+       <widget class="QLabel" name="label">
+        <property name="minimumWidth">
+         <number>100</number>
+        </property>
+        <property name="text">
+         <string>视频帧率:</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignRight|Qt::AlignVCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="1">
+       <widget class="QSpinBox" name="spinBox">
+        <property name="minimumSize">
+         <size>
+          <width>120</width>
+          <height>30</height>
+         </size>
+        </property>
+        <property name="suffix">
+         <string> fps</string>
+        </property>
+        <property name="minimum">
+         <number>15</number>
+        </property>
+        <property name="maximum">
+         <number>60</number>
+        </property>
+        <property name="value">
+         <number>25</number>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="0">
+       <widget class="QLabel" name="label_4">
+        <property name="text">
+         <string>画质级别:</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignRight|Qt::AlignVCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="1">
+       <widget class="QComboBox" name="comboBox_4">
+        <property name="minimumSize">
+         <size>
+          <width>200</width>
+          <height>30</height>
+         </size>
+        </property>
+        <property name="styleSheet">
+         <string>QComboBox { padding: 5px; }</string>
+        </property>
+        <item>
+         <property name="text">
+          <string>4K (3840×2160) - 超高清</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>原画 (屏幕分辨率)</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>2K (2560×1440) - 2K高清</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>1080P (1920×1080) - 全高清</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>720P (1280×720) - 高清</string>
+         </property>
+        </item>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   
+   <item>
+    <widget class="QGroupBox" name="audioGroupBox">
+     <property name="title">
+      <string>音频设置</string>
+     </property>
+     <layout class="QGridLayout" name="gridLayout_2">
+      <item row="0" column="0">
+       <widget class="QLabel" name="label_2">
+        <property name="text">
+         <string>音频码率:</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignRight|Qt::AlignVCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="1">
+       <widget class="QComboBox" name="comboBox_2">
+        <property name="minimumSize">
+         <size>
+          <width>120</width>
+          <height>30</height>
+         </size>
+        </property>
+        <item>
+         <property name="text">
+          <string>320 kbps - 超高质量</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>256 kbps - 高质量</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>192 kbps - 中等质量</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>128 kbps - 标准质量</string>
+         </property>
+        </item>
+        <item>
+         <property name="text">
+          <string>64 kbps - 低质量</string>
+         </property>
+        </item>
+       </widget>
+      </item>
+      <item row="1" column="0">
+       <widget class="QLabel" name="label_8">
+        <property name="text">
+         <string>麦克风设备:</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignRight|Qt::AlignVCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="1">
+       <widget class="QComboBox" name="micComboBox">
+        <property name="minimumSize">
+         <size>
+          <width>200</width>
+          <height>30</height>
+         </size>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+
+   <item>
+    <widget class="QGroupBox" name="toolsGroupBox">
+     <property name="title">
+      <string>辅助工具</string>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout_3">
+      <item>
+       <layout class="QHBoxLayout" name="watermarkLayout">
+        <item>
+         <widget class="QLabel" name="label_9">
+          <property name="minimumWidth">
+           <number>100</number>
+          </property>
+          <property name="text">
+           <string>图片水印:</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignRight|Qt::AlignVCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="imageWatermarkPath">
+          <property name="minimumSize">
+           <size>
+            <width>200</width>
+            <height>30</height>
+           </size>
+          </property>
+          <property name="readOnly">
+           <bool>true</bool>
+          </property>
+          <property name="placeholderText">
+           <string>选择水印图片...</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="selectImageBtn">
+          <property name="minimumSize">
+           <size>
+            <width>80</width>
+            <height>30</height>
+           </size>
+          </property>
+          <property name="text">
+           <string>浏览</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      
+      <item>
+       <layout class="QHBoxLayout" name="textWatermarkLayout">
+        <item>
+         <widget class="QLabel" name="label_10">
+          <property name="minimumWidth">
+           <number>100</number>
+          </property>
+          <property name="text">
+           <string>文字水印:</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignRight|Qt::AlignVCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="watermarkText">
+          <property name="minimumSize">
+           <size>
+            <width>200</width>
+            <height>30</height>
+           </size>
+          </property>
+          <property name="placeholderText">
+           <string>输入水印文字...</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="fontSettingBtn">
+          <property name="minimumSize">
+           <size>
+            <width>80</width>
+            <height>30</height>
+           </size>
+          </property>
+          <property name="text">
+           <string>字体设置</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </widget>
+   </item>
+
+   <item>
+    <widget class="QGroupBox" name="saveGroupBox">
+     <property name="title">
+      <string>保存设置</string>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout_2">
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout">
+        <item>
+         <widget class="QLabel" name="label_7">
+          <property name="text">
+           <string>保存路径:</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="dirLineEdit">
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>30</height>
+           </size>
+          </property>
+          <property name="readOnly">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="modifyDirctory">
+          <property name="minimumSize">
+           <size>
+            <width>80</width>
+            <height>30</height>
+           </size>
+          </property>
+          <property name="text">
+           <string>更改</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="openDirectory">
+          <property name="minimumSize">
+           <size>
+            <width>80</width>
+            <height>30</height>
+           </size>
+          </property>
+          <property name="text">
+           <string>打开</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

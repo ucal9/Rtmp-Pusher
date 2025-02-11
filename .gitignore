@@ -1,0 +1,5 @@
+*.user
+.qmake.stash
+Makefile.Release
+Makefile.Debug
+0voice_pusher.pro.*

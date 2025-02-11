@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>AudioOptimizerDialog</class>
+ <widget class="QDialog" name="AudioOptimizerDialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>414</width>
+    <height>165</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>声音优化</string>
+  </property>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>30</y>
+     <width>72</width>
+     <height>15</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>声音优化</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_4">
+   <property name="geometry">
+    <rect>
+     <x>310</x>
+     <y>100</y>
+     <width>91</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>默认值：0</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_5">
+   <property name="geometry">
+    <rect>
+     <x>310</x>
+     <y>60</y>
+     <width>91</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>默认值：0</string>
+   </property>
+  </widget>
+  <widget class="QWidget" name="layoutWidget">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>60</y>
+     <width>241</width>
+     <height>69</height>
+    </rect>
+   </property>
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="0" column="0">
+     <widget class="QLabel" name="label_2">
+      <property name="text">
+       <string>音频降噪:</string>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="1">
+     <widget class="QComboBox" name="noiseComboBox">
+      <property name="minimumSize">
+       <size>
+        <width>120</width>
+        <height>30</height>
+       </size>
+      </property>
+      <item>
+       <property name="text">
+        <string>关闭</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>低档</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>中档</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>高档</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>超高档</string>
+       </property>
+      </item>
+     </widget>
+    </item>
+    <item row="1" column="0">
+     <widget class="QLabel" name="label_3">
+      <property name="text">
+       <string>麦克风增强:</string>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="1">
+     <widget class="QComboBox" name="agcComboBox">
+      <property name="minimumSize">
+       <size>
+        <width>120</width>
+        <height>30</height>
+       </size>
+      </property>
+      <item>
+       <property name="text">
+        <string>关闭</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>25%</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>50%</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>75%</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>100%</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>125%</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>150%</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>175%</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>200%</string>
+       </property>
+      </item>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>HomeWindow</class>
+ <widget class="QMainWindow" name="HomeWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>2400</width>
+    <height>1400</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>2400</width>
+    <height>1400</height>
+   </size>
+  </property>
+  <property name="font">
+   <font>
+    <family>Microsoft YaHei,微软雅黑</family>
+   </font>
+  </property>
+  <property name="windowTitle">
+   <string>RTMP-pusher</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">
+    QMainWindow {
+        background: #f5f5f5;
+        font-family: &quot;Microsoft YaHei&quot;, &quot;微软雅黑&quot;;
+    }
+    
+    QStatusBar {
+        background: #f5f5f5;
+    }
+
+    QGroupBox {
+        background: white;
+        border-radius: 8px;
+        border: 1px solid #ddd;
+        margin-top: 12px;
+        padding: 15px;
+        font-family: &quot;Microsoft YaHei&quot;, &quot;微软雅黑&quot;;
+        font-size: 10pt;
+    }
+    
+    QGroupBox::title {
+        color: #333;
+        subcontrol-origin: margin;
+        left: 15px;
+        padding: 0 5px 0 5px;
+        font-family: &quot;Microsoft YaHei&quot;, &quot;微软雅黑&quot;;
+        font-size: 10pt;
+    }
+
+    QComboBox, QSpinBox {
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        padding: 5px;
+        background: white;
+        font-family: &quot;Microsoft YaHei&quot;, &quot;微软雅黑&quot;;
+        font-size: 9pt;
+    }
+
+    QComboBox:hover, QSpinBox:hover {
+        border-color: #1890ff;
+    }
+
+    QPushButton {
+        background: #1890ff;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        padding: 8px 15px;
+        min-width: 80px;
+        font-family: &quot;Microsoft YaHei&quot;, &quot;微软雅黑&quot;;
+        font-size: 9pt;
+    }
+
+    QPushButton:hover {
+        background: #40a9ff;
+    }
+
+    QPushButton:disabled {
+        background: #bae7ff;
+    }
+
+    QCheckBox {
+        spacing: 8px;
+        font-family: &quot;Microsoft YaHei&quot;, &quot;微软雅黑&quot;;
+        font-size: 9pt;
+    }
+
+    QCheckBox::indicator {
+        width: 18px;
+        height: 18px;
+    }
+
+    QLabel {
+        font-family: &quot;Microsoft YaHei&quot;, &quot;微软雅黑&quot;;
+        font-size: 9pt;
+        color: #333333;
+    }
+   </string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <layout class="QHBoxLayout" name="horizontalLayout_main">
+    <item>
+     <widget class="DisplayWind" name="previewWidget" native="true">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+        <horstretch>2</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <layout class="QVBoxLayout" name="rightLayout">
+      <item>
+       <widget class="QLabel" name="avLabel">
+        <property name="text">
+         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;yzl&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QGroupBox" name="typeGroupBox">
+        <property name="title">
+         <string>业务类型</string>
+        </property>
+        <layout class="QHBoxLayout" name="typeLayout">
+         <item>
+          <widget class="QRadioButton" name="liveRadioButton">
+           <property name="text">
+            <string>直播推送</string>
+           </property>
+           <property name="checked">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QRadioButton" name="recRadioBtn">
+           <property name="text">
+            <string>录制</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QRadioButton" name="fileRadioBtn">
+           <property name="text">
+            <string>文件推送</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item>
+       <layout class="QVBoxLayout" name="encoderContainerLayout"/>
+      </item>
+      <item>
+       <layout class="QVBoxLayout" name="settingLayout">
+        <item>
+         <widget class="QCheckBox" name="checkBoxRecord">
+          <property name="text">
+           <string>同时录制</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="timeLayout">
+          <item>
+           <widget class="QLabel" name="label_5">
+            <property name="text">
+             <string>时长:</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="timeLablel">
+            <property name="text">
+             <string>00:00:00</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="buttonLayout">
+        <item>
+         <widget class="QPushButton" name="startOrPauseBtn">
+          <property name="text">
+           <string>开始</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="stopBtn">
+          <property name="text">
+           <string>停止</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="watermarkLayout">
+        <item>
+         <widget class="QPushButton" name="imageWatermarkBtn">
+          <property name="text">
+           <string>图片水印</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="textWatermarkBtn">
+          <property name="text">
+           <string>文字水印</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>2400</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menu">
+    <property name="title">
+     <string>设置</string>
+    </property>
+    <action name="actionAudioOptimizer">
+     <property name="text">
+      <string>声音优化</string>
+     </property>
+    </action>
+    <action name="actionRecordSetting">
+     <property name="text">
+      <string>录屏设置</string>
+     </property>
+    </action>
+    <action name="actionLiveSetting">
+     <property name="text">
+      <string>直播设置</string>
+     </property>
+    </action>
+    <addaction name="actionAudioOptimizer"/>
+    <addaction name="actionRecordSetting"/>
+    <addaction name="actionLiveSetting"/>
+   </widget>
+   <addaction name="menu"/>
+  </widget>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>DisplayWind</class>
+   <extends>QWidget</extends>
+   <header location="global">displaywind.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>

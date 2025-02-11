@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>DisplayWind</class>
+ <widget class="QWidget" name="DisplayWind">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>771</width>
+    <height>471</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">border: 3px rgb(1, 255, 255);</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
